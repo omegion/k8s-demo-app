@@ -3,11 +3,13 @@ kind: Application
 metadata:
   name: demo-app
   namespace: argocd
+  annotations:
+    notifications.argoproj.io/subscribe.test.github: ""
 spec:
   destination:
     namespace: default
     server: https://kubernetes.default.svc
-  project: argocd
+  project: default
   source:
     path: charts/demo-app
     repoURL: https://github.com/omegion/k8s-demo-app
