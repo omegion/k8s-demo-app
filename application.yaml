@@ -4,7 +4,7 @@ metadata:
   name: demo-app
   namespace: argocd
   annotations:
-    notifications.argoproj.io/subscribe.test.github: ""
+    notifications.argoproj.io/subscribe.app-deployed.github: ""
 spec:
   destination:
     namespace: default
